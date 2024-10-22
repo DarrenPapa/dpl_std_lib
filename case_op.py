@@ -1,5 +1,5 @@
 if __name__ != "__dpl__":
-    raise Exception
+    raise Exception("This is a DPL extension")
 
 temp = {
 }
@@ -32,4 +32,4 @@ def titleCase(_, __, string):
 def capitalize(_, __, string):
     return string.capitalize(),
 
-varproc.mods["py"]["cases"] = temp
+varproc.modules["py"]["cases"] = temp
