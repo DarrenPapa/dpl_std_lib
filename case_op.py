@@ -6,15 +6,15 @@ temp = {
 
 @add_method()
 def isUpper(_, string):
-    return string.isupper(),
+    return string.isupper()
 
 @add_method()
 def isLower(_, string):
-    return string.islower(),
+    return string.islower()
 
 @add_method()
 def toUpper(_, string):
-    return string.upper(),
+    return string.upper()
 
 @add_method()
 def toLower(_, string):
@@ -22,10 +22,10 @@ def toLower(_, string):
 
 @add_method()
 def titleCase(_, string):
-    return string.title(),
+    return string.title()
 
 @add_method()
 def capitalize(_, string):
-    return string.capitalize(),
+    return string.capitalize()
 
 varproc.modules["py"]["cases"] = temp
