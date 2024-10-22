@@ -5,27 +5,27 @@ temp = {
 }
 
 @add_method()
-def isUpper(_, __, string):
+def isUpper(_, string):
     return string.isupper(),
 
 @add_method()
-def isLower(_, __, string):
+def isLower(_, string):
     return string.islower(),
 
 @add_method()
-def toUpper(_, __, string):
+def toUpper(_, string):
     return string.upper(),
 
 @add_method()
-def toLower(_, __, string):
+def toLower(_, string):
     return string.lower()
 
 @add_method()
-def titleCase(_, __, string):
+def titleCase(_, string):
     return string.title(),
 
 @add_method()
-def capitalize(_, __, string):
+def capitalize(_, string):
     return string.capitalize(),
 
 varproc.modules["py"]["cases"] = temp
