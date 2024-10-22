@@ -25,7 +25,6 @@ def titleCase(_, __, string):
     return string.title(),
 
 @add_method()
-@fn
 def capitalize(_, __, string):
     return string.capitalize(),
 
