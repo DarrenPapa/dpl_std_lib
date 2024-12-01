@@ -1,0 +1,18 @@
+# In my own programming language!
+
+&use !"tkinter_main.py"
+&use <to_py.py>
+&use <text_io.py>
+
+body to_py:define test
+    io:println "Test"
+    io:flush
+end
+
+io:println :tkinter
+pycatch [app_config app] tkinter.tk_window "My Tkinter window!" "400x150"
+
+pycatch [button] tkinter.tk_button :app "Click me!" :test
+tkinter.tk_pack :button
+
+tkinter.tk_mainloop :app

@@ -1,0 +1,26 @@
+# Semi simple thing.
+
+import "tkinter_main.py" "@loc"
+import "to_callable.py"
+import "dicts.py"
+
+pycatch [app_cfg app] _mods.py.tkinter.tk_window "Message of the day" "300x150"
+
+object this
+body _mods.py.dict :this
+    .def "[KWARGS]"
+    font = [tkDefaultFont 30]
+    text = "Programming is\nvery hard"
+    .let name{[PARGS]} = [:app]
+end
+pycatch [label] _mods.py.tkinter.tk_label :this
+
+_mods.py.tkinter.tk_pack :label
+
+body _mods.py.to_callable test
+    _mods.py.tkinter.tk_messagebox "showinfo" "Why" "Why did you press the label?"
+end
+
+_mods.py.tkinter.tk_call_method :label "bind" "<Button>" :test
+
+_mods.py.tkinter.tk_mainloop :app
